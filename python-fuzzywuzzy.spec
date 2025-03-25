@@ -26,6 +26,8 @@ differing results for certain cases <
 
 %prep
 %autosetup -n %{module}-%{version}
+# Remove bundled egg-info
+rm -rf %{pypi_name}.egg-info
 # Remove shebangs
 sed -i '1{/^#!/d}' fuzzywuzzy/*.py
 
