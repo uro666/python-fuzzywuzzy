@@ -38,7 +38,7 @@ sed -i '1{/^#!/d}' fuzzywuzzy/*.py
 %py3_install
 
 %check
-python test_fuzzywuzzy.py
+%{__python3} test_fuzzywuzzy.py
 
 %files -n python-%{module}
 %{python3_sitelib}/%{module}/
